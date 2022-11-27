@@ -1,0 +1,86 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: beige;
+    margin: 0px;
+}
+
+body {
+    background-color: mediumseagreen;
+}
+
+.header {
+    padding: 20px;
+    background-color: plum;
+    position: fixed;
+    width: 100%;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+nav {
+    display: flex;
+    padding-top: 15px;
+    padding-right: 50px;
+    float: right;
+    font-size: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: -10px;
+}
+
+.firstsection {
+    padding-top: 140px;
+    display: flex;
+}
+/* this is the solution for the first major debug I encountered (kudos to Ryan for the assist). With the header in a position:fixed state, simply modifying the positioning of the div element wasn't possible without affecting the header. I still don't really get why it doesn't work to just push the one container down with a margin-top, but the elegant solution we found was to simply add padding to the top of its section container element */
+
+.bodysection {
+    padding-top: 50px;
+    display: flex;
+}
+
+.bio {
+    margin: auto;
+    background-color: paleturquoise;
+    width: 85%;
+    min-height: 300px;
+    border: 20px solid paleturquoise;
+    border-radius: 10px;
+}
+
+.bio img {
+    display: flex;
+    max-width: 65%;
+    max-height: 300px;
+    float: left;
+    margin-right: 20px;
+    border-radius: inherit;
+}
+
+p {
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 728px) {
+    nav {
+        flex-direction: column;
+        float: none;
+    }
+    nav a {
+        padding: 10px;
+        margin: 0px;
+    }
+    .firstsection {
+        padding-top: 286px;
+    }
+    .bio img {
+        margin-bottom: 10px;
+    }
+}
