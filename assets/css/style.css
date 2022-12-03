@@ -1,58 +1,77 @@
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: beige;
+    color: rgb(220, 220, 220);
     margin: 0px;
 }
 
-body {
-    background-color: mediumseagreen;
+:root {
+    --mutegreen: rgb(88, 122, 88);
+    --forest: rgb(0, 64, 14);
+    --graybg: rgb(58, 58, 58)
 }
 
-.header {
+p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+header {
     padding: 20px;
-    background-color: plum;
+    background-color: var(--graybg);
     position: fixed;
     width: 100%;
 }
 
 h1 {
-    display: inline-block;
     font-size: 48px;
+}
+
+.headline {
+    display: inline-block;
 }
 
 nav {
     display: flex;
-    padding-top: 15px;
+    padding-top: 25px;
     padding-right: 50px;
     float: right;
     font-size: 20px;
 }
 
-nav a {
-    color: #ffffff;
+a {
     text-decoration: none;
+}
+
+nav a {
     padding: 10px;
     margin-top: -10px;
 }
 
+nav a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: var(--mutegreen);
+}
+
 .firstsection {
-    padding-top: 140px;
+    padding-top: 175px;
     display: flex;
 }
 /* this is the solution for the first major debug I encountered (kudos to Ryan for the assist). With the header in a position:fixed state, simply modifying the positioning of the div element wasn't possible without affecting the header. I still don't really get why it doesn't work to just push the one container down with a margin-top, but the elegant solution we found was to simply add padding to the top of its section container element */
 
-.bodysection {
-    padding-top: 50px;
-    display: flex;
-}
-
 .bio {
     margin: auto;
-    background-color: paleturquoise;
+    background-color: var(--forest);
     width: 85%;
     min-height: 300px;
-    border: 20px solid paleturquoise;
-    border-radius: 10px;
+    border: 20px solid var(--forest);
+    border-radius: 40px;
 }
 
 .bio img {
@@ -64,11 +83,89 @@ nav a {
     border-radius: inherit;
 }
 
-p {
-    padding-top: 10px;
+.bio h2 {
+    text-decoration: underline;
+    padding-bottom: 10px;
 }
 
-@media screen and (max-width: 728px) {
+.bodysection {
+    padding-top: 50px;
+}
+
+.bodysection h2 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 32px;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+#feature {
+    flex: 1 0 800px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-image: url("../images/sample.png");
+    background-size: cover;
+}
+
+.boxitem {
+    flex: 1 0 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    max-width: 300px;
+    border: 1px dotted white;
+    border-radius: 160px;
+    margin: 10px;
+    height: 300px;
+    background-image: url("../images/kubo.jpeg");
+    background-size: cover;
+}
+
+.boxitem p {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 3px;
+    border-radius: 5px;
+}
+
+h3 {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.boxitem:hover {
+    border: 3px solid white;
+}
+
+.boxitem:active {
+    border: 5px solid var(--mutegreen);
+}
+
+#contacts a {
+    color: black;
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+    border: 2px dashed var(--forest);
+    border-radius: 10px;
+}
+
+footer {
+    background-color: var(--graybg);
+}
+
+@media screen and (max-width: 776px) {
     nav {
         flex-direction: column;
         float: none;
@@ -78,7 +175,7 @@ p {
         margin: 0px;
     }
     .firstsection {
-        padding-top: 286px;
+        padding-top: 330px;
     }
     .bio img {
         margin-bottom: 10px;

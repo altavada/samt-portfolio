@@ -1,3 +1,19 @@
+<!-- 
+GIVEN I need to sample a potential employee's previous work
+WHEN I load their portfolio
+THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
+WHEN I click one of the links in the navigation
+THEN the UI scrolls to the corresponding section
+WHEN I click on the link to the section about their work
+THEN the UI scrolls to a section with titled images of the developer's applications
+WHEN I am presented with the developer's first application
+THEN that application's image should be larger in size than the others
+WHEN I click on the images of the applications
+THEN I am taken to that deployed application
+WHEN I resize the page or view the site on various screens and devices
+THEN I am presented with a responsive layout that adapts to my viewport 
+-->
+
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -6,8 +22,11 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   </head>
   <body>
-    <header class="header">
-        <h1>Sam Tomaka</h1>
+    <header>
+        <div class="headline">
+            <h1>Sam Tomaka</h1>
+            <h2>Full Stack Web Development</h2>
+        </div>
         <nav>
             <a href="#about">About Me</a>
             <a href="#mylinks">Deployed Projects</a>
@@ -26,21 +45,86 @@
                 </div>
             </div>
         </section>
-        <section class="bodysection">
-            <div id="mylinks" class="bio">
-                <img src="./assets/images/img-1.png" alt="Sam Tomaka professional headshot.">
-                <div class="textcontent">
-                    <h2>About Me</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sapiente architecto quisquam in, rem exercitationem fuga, fugiat error tenetur numquam ducimus quaerat. Fugiat atque iure id quasi consectetur ipsum labore quidem, aliquid, quam nulla magni voluptate voluptates placeat dolor nisi, assumenda adipisci obcaecati consequuntur ad cupiditate odio. Provident est corrupti dignissimos eveniet vero? Quisquam, in porro numquam inventore at dolore quo? Nisi sit, porro eveniet aperiam asperiores consequatur dolores fuga amet quod iure consequuntur atque. Ea saepe sunt enim perspiciatis ex reprehenderit voluptas blanditiis dolorum ipsum distinctio architecto, velit praesentium, deleniti at tenetur delectus similique vel sed sequi illo cumque.
-                    </p>
-                </div>
+        <section class="bodysection" id="mylinks">
+            <h2>Deployed Projects</h2>
+            <div class="boxes">
+                <a href="https://altavada.github.io/samt-refactor-project/">
+                    <div class="boxitem" id="feature">
+                        <img>
+                        <h3>Project 1</h3> 
+                        <p>
+                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, commodi nam. Eligendi facilis vero obcaecati possimus alias debitis, laboriosam ut?
+                        </p>
+                    </div>
+                </a>
+                <a href="http://google.com">
+                    <div class="boxitem">
+                        <img>
+                        <h3>Project 1</h3> 
+                        <p>
+                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, commodi nam. Eligendi facilis vero obcaecati possimus alias debitis, laboriosam ut?
+                        </p>
+                    </div>
+                </a>
+                <a href="http://google.com">
+                    <div class="boxitem">
+                        <img>
+                        <h3>Project 1</h3> 
+                        <p>
+                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, commodi nam. Eligendi facilis vero obcaecati possimus alias debitis, laboriosam ut?
+                        </p>
+                    </div>
+                </a>
+                <a href="http://google.com">
+                    <div class="boxitem">
+                        <img>
+                        <h3>Project 1</h3> 
+                        <p>
+                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, commodi nam. Eligendi facilis vero obcaecati possimus alias debitis, laboriosam ut?
+                        </p>
+                    </div>
+                </a>
+                <a href="http://google.com">
+                    <div class="boxitem">
+                        <img>
+                        <h3>Project 1</h3> 
+                        <p>
+                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, commodi nam. Eligendi facilis vero obcaecati possimus alias debitis, laboriosam ut?
+                        </p>
+                    </div>
+                </a>
+                <a href="http://google.com">
+                    <div class="boxitem">
+                        <img>
+                        <h3>Project 1</h3> 
+                        <p>
+                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, commodi nam. Eligendi facilis vero obcaecati possimus alias debitis, laboriosam ut?
+                        </p>
+                    </div>
+                </a>
+                <a href="http://google.com">
+                    <div class="boxitem">
+                        <img>
+                        <h3>Project 1</h3> 
+                        <p>
+                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, commodi nam. Eligendi facilis vero obcaecati possimus alias debitis, laboriosam ut?
+                        </p>
+                    </div>
+                </a>
             </div>
         </section>
-        <section>
-            
+        <section class="bodysection" id="contacts">
+            <h2>Contact Me</h2>
+            <div class="boxes">
+                <a href="mailto:sam.tomaka@gmail.com">Email Me</a>
+                <a href="mailto:sam.tomaka@gmail.com">Indeed</a>
+                <a href="mailto:sam.tomaka@gmail.com">LinkedIn</a>
+            </div>
         </section>
     </main>
+    <footer>
+        
+    </footer>
   </body>
 
 </html>
