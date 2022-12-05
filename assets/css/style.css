@@ -59,11 +59,11 @@ a:active {
     color: var(--mutegreen);
 }
 
+/* this is the solution for the first major debug I encountered (kudos to Ryan for the assist). With the header in a position:fixed state, simply modifying the positioning of the div element wasn't possible without affecting the header. I still don't really get why it doesn't work to just push the one container down with a margin-top, but the elegant solution we found was to simply add padding to the top of its section container element */
 .firstsection {
     padding-top: 175px;
     display: flex;
 }
-/* this is the solution for the first major debug I encountered (kudos to Ryan for the assist). With the header in a position:fixed state, simply modifying the positioning of the div element wasn't possible without affecting the header. I still don't really get why it doesn't work to just push the one container down with a margin-top, but the elegant solution we found was to simply add padding to the top of its section container element */
 
 .bio {
     margin: auto;
@@ -114,6 +114,7 @@ a:active {
     background-size: cover;
 }
 
+/* These pseudo classes ensure that feature project's enlarged border doesn't move other elements on page. Similar modifications made for .boxitem elements */
 #feature:hover {
     margin-bottom: 18px;
 }
@@ -196,6 +197,7 @@ a:active {
     background-color: gray;
 }
 
+/* Simple tooltip mechanic */
 span[data-descr] {
     color: black;
     position: relative;
@@ -214,7 +216,7 @@ span[data-descr]:hover::after {
 .foot {
     position: static;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 50px;
     font-size: 10px;
     padding-bottom: 35px;
 }
@@ -225,6 +227,7 @@ span[data-descr]:hover::after {
     padding-right: 30px;
 }
 
+/* Adjusts navbar to column form and repositions main body content accordingly */
 @media screen and (max-width: 877px) {
     nav {
         flex-direction: column;
