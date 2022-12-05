@@ -18,26 +18,27 @@ THEN I am presented with a responsive layout that adapts to my viewport
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
-    <title>Sam Tomaka Web Development Portfolio</title>
+    <title>Samuel Tomaka Web Development Portfolio</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   </head>
   <body>
     <header>
         <div class="headline">
-            <h1>Sam Tomaka</h1>
+            <h1>Samuel Tomaka</h1>
             <h2>Full Stack Web Development</h2>
         </div>
         <nav>
             <a href="#about">About Me</a>
             <a href="#mylinks">Deployed Projects</a>
             <a href="#contacts">Contact Me</a>
+            <!-- I've tried extensively on my own and during office hours to find a CSS solution for properly offsetting these target ID's relative to my position:fixed nav bar, to no avail. I should be able to use the :target pseudoclass as in this mockup (http://jsfiddle.net/5Ngft/), but I can't get it to work properly for me. Advice needed. -->
         </nav>
     </header>
     <main>
         <section class="firstsection">
             <div id="about" class="bio">
-                <img src="./assets/images/img-1.png" alt="Sam Tomaka professional headshot.">
-                <div class="textcontent">
+                <img src="./assets/images/me.png" alt="Sam Tomaka professional headshot.">
+                <div>
                     <h2>About Me</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sapiente architecto quisquam in, rem exercitationem fuga, fugiat error tenetur numquam ducimus quaerat. Fugiat atque iure id quasi consectetur ipsum labore quidem, aliquid, quam nulla magni voluptate voluptates placeat dolor nisi, assumenda adipisci obcaecati consequuntur ad cupiditate odio. Provident est corrupti dignissimos eveniet vero? Quisquam, in porro numquam inventore at dolore quo? Nisi sit, porro eveniet aperiam asperiores consequatur dolores fuga amet quod iure consequuntur atque. Ea saepe sunt enim perspiciatis ex reprehenderit voluptas blanditiis dolorum ipsum distinctio architecto, velit praesentium, deleniti at tenetur delectus similique vel sed sequi illo cumque.
@@ -50,64 +51,62 @@ THEN I am presented with a responsive layout that adapts to my viewport
             <div class="boxes">
                 <a href="https://altavada.github.io/samt-refactor-project/">
                     <div class="boxitem" id="feature">
-                        <img>
-                        <h3>Project 1</h3> 
+                        <h3>Horiseon Homepage</h3> 
                         <p>
-                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, commodi nam. Eligendi facilis vero obcaecati possimus alias debitis, laboriosam ut?
+                            An exercise in efficient CSS refactoring and utilization of semantic HTML elements for practical organization and styling purposes. Assignment for UNC Chapel Hill Coding Bootcamp, week 1. Modified iteration of preexisting starter code.
                         </p>
                     </div>
                 </a>
                 <a href="http://google.com">
-                    <div class="boxitem">
-                        <img>
-                        <h3>Project 1</h3> 
+                    <div class="boxitem" id="proj2">
+                        <h3>Project 2</h3> 
                         <p>
-                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, commodi nam. Eligendi facilis vero obcaecati possimus alias debitis, laboriosam ut?
+                            Coming soon!
                         </p>
                     </div>
                 </a>
                 <a href="http://google.com">
-                    <div class="boxitem">
+                    <div class="boxitem" id="proj3">
                         <img>
-                        <h3>Project 1</h3> 
+                        <h3>Project 3</h3> 
                         <p>
-                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, commodi nam. Eligendi facilis vero obcaecati possimus alias debitis, laboriosam ut?
+                            Coming soon!
                         </p>
                     </div>
                 </a>
                 <a href="http://google.com">
-                    <div class="boxitem">
+                    <div class="boxitem" id="proj4">
                         <img>
-                        <h3>Project 1</h3> 
+                        <h3>Project 4</h3> 
                         <p>
-                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, commodi nam. Eligendi facilis vero obcaecati possimus alias debitis, laboriosam ut?
+                            Coming soon!
                         </p>
                     </div>
                 </a>
                 <a href="http://google.com">
-                    <div class="boxitem">
+                    <div class="boxitem" id="proj5">
                         <img>
-                        <h3>Project 1</h3> 
+                        <h3>Project 5</h3> 
                         <p>
-                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, commodi nam. Eligendi facilis vero obcaecati possimus alias debitis, laboriosam ut?
+                            Coming soon!
                         </p>
                     </div>
                 </a>
                 <a href="http://google.com">
-                    <div class="boxitem">
+                    <div class="boxitem" id="proj6">
                         <img>
-                        <h3>Project 1</h3> 
+                        <h3>Project 6</h3> 
                         <p>
-                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, commodi nam. Eligendi facilis vero obcaecati possimus alias debitis, laboriosam ut?
+                            Coming soon!
                         </p>
                     </div>
                 </a>
                 <a href="http://google.com">
-                    <div class="boxitem">
+                    <div class="boxitem" id="proj7">
                         <img>
-                        <h3>Project 1</h3> 
+                        <h3>Project 7</h3> 
                         <p>
-                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, commodi nam. Eligendi facilis vero obcaecati possimus alias debitis, laboriosam ut?
+                            Coming soon!                        
                         </p>
                     </div>
                 </a>
@@ -117,13 +116,13 @@ THEN I am presented with a responsive layout that adapts to my viewport
             <h2>Contact Me</h2>
             <div class="boxes">
                 <a href="mailto:sam.tomaka@gmail.com">Email Me</a>
-                <a href="mailto:sam.tomaka@gmail.com">Indeed</a>
-                <a href="mailto:sam.tomaka@gmail.com">LinkedIn</a>
+                <a href="http://google.com"><span data-descr="Coming soon!">Indeed</span></a>
+                <a href="http://google.com"><span data-descr="Coming soon!">LinkedIn</span></a>
             </div>
         </section>
     </main>
-    <footer>
-        
+    <footer class="foot">
+        <h2>Created by Samuel Tomaka, 2022</h2>
     </footer>
   </body>
 
