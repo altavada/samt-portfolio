@@ -1,0 +1,243 @@
+* {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(220, 220, 220);
+    margin: 0px;
+}
+
+:root {
+    --mutegreen: rgb(88, 122, 88);
+    --forest: rgb(0, 64, 14);
+    --graybg: rgb(58, 58, 58);
+}
+
+p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+header, footer {
+    padding: 20px;
+    background-color: var(--graybg);
+    position: fixed;
+    width: 100%;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+.headline {
+    display: inline-block;
+}
+
+nav {
+    display: flex;
+    padding-top: 25px;
+    padding-right: 50px;
+    float: right;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a {
+    padding: 10px;
+    margin-top: -10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: var(--mutegreen);
+}
+
+/* this is the solution for the first major debug I encountered (kudos to Ryan for the assist). With the header in a position:fixed state, simply modifying the positioning of the div element wasn't possible without affecting the header. I still don't really get why it doesn't work to just push the one container down with a margin-top, but the elegant solution we found was to simply add padding to the top of its section container element */
+.firstsection {
+    padding-top: 175px;
+    display: flex;
+}
+
+.bio {
+    margin: auto;
+    background-color: var(--forest);
+    width: 85%;
+    min-height: 300px;
+    border: 20px solid var(--forest);
+    border-radius: 40px;
+}
+
+.bio img {
+    display: flex;
+    max-width: 65%;
+    max-height: 300px;
+    float: left;
+    margin-right: 10px;
+    border-radius: inherit;
+}
+
+.bio h2 {
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
+.bodysection {
+    padding-top: 50px;
+}
+
+.bodysection h2 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 32px;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+#feature {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-image: url("../images/sample.png");
+    background-size: cover;
+}
+
+/* These pseudo classes ensure that feature project's enlarged border doesn't move other elements on page. Similar modifications made for .boxitem elements */
+#feature:hover {
+    margin-bottom: 18px;
+}
+
+#feature:active {
+    margin-bottom: 16px;
+}
+
+.boxitem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    max-width: 300px;
+    min-width: 300px;
+    border: 1px dotted white;
+    border-radius: 160px;
+    margin: 10px;
+    height: 300px;
+    background-size: cover;
+}
+
+.boxitem p, h3 {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.boxitem:hover {
+    border: 3px solid white;
+    margin: 8px;
+}
+
+.boxitem:active {
+    border: 5px solid var(--mutegreen);
+    margin: 6px;
+}
+
+#proj2 {
+    background-image: url("../images/kubo.jpeg");
+}
+
+#proj3 {
+    background-image: url("../images/driftwood.jpeg");
+}
+
+#proj4 {
+    background-image: url("../images/elmofalls.jpeg");
+}
+
+#proj5 {
+    background-image: url("../images/pasture.jpeg");
+}
+
+#proj6 {
+    background-image: url("../images/onrappel.jpeg");
+}
+
+#proj7 {
+    background-image: url("../images/samknob.jpeg");
+}
+
+#contacts a {
+    color: black;
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+    border: 2px dashed var(--forest);
+    border-radius: 10px;
+}
+
+#contacts a:hover {
+    border: 3px solid var(--mutegreen);
+    margin: 4px;
+}
+
+#contacts a:active {
+    background-color: gray;
+}
+
+/* Simple tooltip mechanic */
+span[data-descr] {
+    color: black;
+    position: relative;
+}
+
+span[data-descr]:hover::after {
+    content: attr(data-descr);
+    color: white;
+    background-color: darkgray;
+    position: absolute;
+    font-size: small;
+    padding: 3px;
+    top: -35px;
+}
+
+.foot {
+    position: static;
+    text-align: left;
+    margin-top: 50px;
+    font-size: 10px;
+    padding-bottom: 35px;
+}
+
+.foot h2 {
+    display: inline-block;
+    float: right;
+    padding-right: 30px;
+}
+
+/* Adjusts navbar to column form and repositions main body content accordingly */
+@media screen and (max-width: 877px) {
+    nav {
+        flex-direction: column;
+        float: none;
+    }
+    nav a {
+        padding: 10px;
+        margin: 0px;
+    }
+    .firstsection {
+        padding-top: 330px;
+    }
+}
